@@ -38,7 +38,9 @@ static char	*ft_strndup(const char *str, int n)
 	int		len_max;
 	char	*dest;
 
-	len_max = ft_strlen(str);
+	len_max = 0;
+	while (str[len_max])
+		len_max++;
 	if (len_max > n)
 		len_max = n;
 	dest = malloc(len_max + 1);
