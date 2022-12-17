@@ -1,0 +1,18 @@
+# System files
+.DS_Store
+
+# Object files
+*.o
+
+# Libraries
+*.a
+
+# Executables
+*.out
+push_swap
+
+# Temp files
+*.swp
+
+# Debug files
+*.dSYM/

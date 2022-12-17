@@ -2,7 +2,7 @@
 #include "./libft/libft.h"
 
 //gcc -Wall -Wextra -Werror ./libft/libft.a push_swap.c -o push_swap
-//ARG='3 2 1 0'; ./push_swap $ARG | ./checker_mac $ARG
+//ARG='3 2 1 0'; ./push_swap $ARG | ./checker_??? $ARG
 
 // int	main(int ac, char **av)
 // {
