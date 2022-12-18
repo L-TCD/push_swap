@@ -6,27 +6,20 @@
 /*   By: lcoissar <lcoissar@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 14:08:38 by lcoissar          #+#    #+#             */
-/*   Updated: 2022/12/17 15:36:09 by lcoissar         ###   ########lyon.fr   */
+/*   Updated: 2022/12/18 03:09:22 by lcoissar         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> //to remove
-#include "push_swap.h"
+#include "../INC/push_swap.h"
 
-//gcc -Wall -Wextra -Werror push_swap.c ft_atoi.c ft_split.c -o push_swap
-//ARG='3 2 1 0'; ./push_swap $ARG | ./checker_linux $ARG
+void	printf_tab(int *tab, int size)
+{
+	int	i;
 
-// int	main(int ac, char **av)
-// {
-// 	(void)ac;
-// 	(void)av;
-// 	printf("rra\n");
-// 	printf("pb\n");
-// 	printf("sa\n");
-// 	printf("rra\n");
-// 	printf("pa\n");
-// 	return (0);
-// }
+	i = -1;
+	while (++i < size)
+		ft_printf("%d\n", tab[i]);
+}
 
 int	*get_int_array_from_string(char *str, char separator, int *size)
 {
@@ -53,15 +46,6 @@ int	*get_int_array_from_string(char *str, char separator, int *size)
 	return (tab);
 }
 
-void	printf_tab(int *tab, int size)
-{
-	int	i;
-
-	i = -1;
-	while (++i < size)
-		printf("%d\n", tab[i]);
-}
-
 int	main(int ac, char **av)
 {
 	int	*tab;
@@ -83,8 +67,22 @@ int	main(int ac, char **av)
 		while (++i < size)
 			tab[i] = ft_atoi(av[i + 1]);
 	}
-	printf("ac : %d\n", ac);
+	ft_printf("ac : %d\n", ac);
 	printf_tab(tab, size);
 	free(tab);
 	return (0);
 }
+
+//ARG='3 2 1 0'; ./push_swap $ARG | ./checker_linux $ARG
+
+// int	main(int ac, char **av)
+// {
+// 	(void)ac;
+// 	(void)av;
+// 	ft_printf("rra\n");
+// 	ft_printf("pb\n");
+// 	ft_printf("sa\n");
+// 	ft_printf("rra\n");
+// 	ft_printf("pa\n");
+// 	return (0);
+// }

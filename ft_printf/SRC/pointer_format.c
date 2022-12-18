@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   pointer_format.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcoissar <lcoissar@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/17 14:05:38 by lcoissar          #+#    #+#             */
-/*   Updated: 2022/12/17 14:05:38 by lcoissar         ###   ########lyon.fr   */
+/*   Created: 2022/11/18 07:02:31 by lcoissar          #+#    #+#             */
+/*   Updated: 2022/11/18 07:44:35 by lcoissar         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "../INC/ft_printf.h"
+#include <stdio.h>
 
-// # include <stdio.h>
-# include <stdlib.h>
+int	pointer_format(void *ptr)
+{
+	char	*str;
+	int		count;
 
-int		ft_atoi(const char *str);
-char	**ft_split(char const *s, char c);
-
-#endif
+	if (ptr == 0)
+	{
+		count = string_format("(nil)");
+		return (count);
+	}
+	string_format("0x");
+	count = 2;
+	str = itoa_base((unsigned long long)ptr, "0123456789abcdef");
+	count += string_format(str);
+	free(str);
+	return (count);
+}
